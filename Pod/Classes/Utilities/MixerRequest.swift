@@ -9,16 +9,16 @@
 import Foundation
 import SwiftyJSON
 
-/// The most low-level class used to make requests to the Mixer servers.
+// The most low-level class used to make requests to the Mixer servers.
 public class MixerRequest {
     
-    /// A delegate for the MixerRequest class.
+    // A delegate for the MixerRequest class.
     public static var delegate: MixerRequestDelegate?
     
-    /// Requests to be executed as soon as a JWT is retrieved.
+    // Requests to be executed as soon as a JWT is retrieved.
     static var pendingRequests = [MixerRequestParameters]()
     
-    /// True if a JWT is currently being requested.
+    // True if a JWT is currently being requested.
     static var requestingJWT = false {
         didSet {
             if !requestingJWT {
@@ -31,10 +31,10 @@ public class MixerRequest {
         }
     }
     
-    /// The version of the app, to be used in request user agents.
+    // The version of the app, to be used in request user agents.
     public static var version = 0.1
     
-    /**
+    /*
      Makes a request to Mixer's servers.
      
      :param: endpoint The endpoint of the request being made.
@@ -56,7 +56,7 @@ public class MixerRequest {
         }
     }
     
-    /**
+    /*
      Retrieves an image from Mixer's servers.
      
      :param: url The URL of the image being retrieved.
@@ -73,7 +73,7 @@ public class MixerRequest {
         }
     }
     
-    /**
+    /*
      Uses a MixerRequestParameters struct to execute a data request.
      
      :param: parameters The parameters to be passed.
@@ -82,7 +82,7 @@ public class MixerRequest {
         dataRequest(parameters.baseURL, requestType: parameters.requestType, headers: parameters.headers, params: parameters.params, body: parameters.body, options: parameters.options, completion: parameters.completion)
     }
     
-    /**
+    /*
      Retrieves data from Mixer's servers.
      
      :param: url The URL of the data being retrieved.
@@ -287,7 +287,7 @@ public class MixerRequest {
         task.resume()
     }
     
-    /**
+    /*
      Retrieves the name of the device being used.
      
      :returns: The name of the device being used.
@@ -307,7 +307,7 @@ public class MixerRequest {
         return identifier
     }
     
-    /**
+    /*
      Creates a parameter string from URL parameters.
      
      :param: queryParameters The keys and values of the URL parameters.
@@ -324,7 +324,7 @@ public class MixerRequest {
         return parts.joined(separator: "&")
     }
     
-    /**
+    /*
      Creates a URL from a base URL and URL parameters.
      
      :param: url The base URL.

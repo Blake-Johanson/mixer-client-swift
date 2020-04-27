@@ -18,11 +18,11 @@ public class MixerUserDefaults: UserDefaults {
         return userDefaults ?? super.standard
     }
     
-    /// MARK: Methods
+    // MARK: Methods
     
-    /// Points the user defaults storage to the shared app container group.
-    ///
-    /// - Parameter suiteName: Application group shared key
+    // Points the user defaults storage to the shared app container group.
+    //
+    // - Parameter suiteName: Application group shared key
     public static func set(suiteName: String) -> Bool {
         if let userDefaults = UserDefaults(suiteName: suiteName) {
             self.userDefaults = userDefaults

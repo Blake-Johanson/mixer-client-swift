@@ -8,7 +8,7 @@
 
 import SwiftyJSON
 
-/// The type of a request error encountered by the app.
+// The type of a request error encountered by the app.
 public enum MixerRequestError: Equatable, Error {
     
     // HTTP Errors
@@ -33,7 +33,7 @@ public enum MixerRequestError: Equatable, Error {
     takenEmail
 }
 
-/// Workaround for the fact that enums with associated values can't have raw types.
+// Workaround for the fact that enums with associated values can't have raw types.
 public func ==(lhs: MixerRequestError, rhs: MixerRequestError) -> Bool {
     switch (lhs, rhs) {
     case (.badRequest(_), .badRequest(_)): return true

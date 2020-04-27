@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// A helper class used to parse dates returned by Mixer's servers.
+// A helper class used to parse dates returned by Mixer's servers.
 public extension Date {
     
     /**

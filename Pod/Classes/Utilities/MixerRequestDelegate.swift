@@ -6,9 +6,9 @@
 //
 //
 
-/// A delegate that allows clients to provide details to the MixerRequest class.
+// A delegate that allows clients to provide details to the MixerRequest class.
 public protocol MixerRequestDelegate: class {
     
-    /// Provides the API client with a new JWT token to use in the event that one is needed.
+    // Provides the API client with a new JWT token to use in the event that one is needed.
     func requestNewJWT(completion: @escaping(_ error: MixerRequestError?) -> Void)
 }
